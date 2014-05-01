@@ -1,0 +1,31 @@
+{
+  "name": "activiti",
+  "version": "0.1.0",
+  "description": "A small library that provides a bridge to the activiti process engine",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.18.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "activiti",
+    "bpmn",
+    "engine"
+  ],
+  "author": "Gerd Klevesaat <gerd.klevesaat@gmail.com> (http://www.siemens.com/)",
+  "license": [
+    {
+      "type": "MIT",
+      "url": "./license.txt"
+    }
+  ],
+  "dependencies": {
+    "java": "^0.3.2"
+  }
+}
