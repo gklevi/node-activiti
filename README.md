@@ -1,23 +1,48 @@
 Activiti 4 Node.js
 ==================
 
-A small node module that provides access to the activiti process engine (http://activiti.org)) using the node java bridge (see https://github.com/joeferner/node-java).
+A very small node module that provides basic access to the activiti process engine (http://activiti.org)) using the node java bridge (see https://github.com/joeferner/node-java).
 
 This module is a result of some experiments with the node platform.
 Trying out the useful node java bridge to leverage java libraries in node. 
 As a show case I have chosen the activiti process engine so that I can use executable bpmn models in node.    
+(an alternative way to use activiti is by using its REST-API, however this module provides a way to use activiti embedded). 
 
 ## Installation
 
   npm install activiti --save
 
+  
 ## Usage
 
-  var activiti = require('activiti'),
+In general, the first step is to configure activiti (data store, users, etc.).
+For example, access to a h2 database can be configured as follows.  
+
+```javascript
+activiti.configure({
+   processEngineName : "myEngine",
+   jdbcUrl: "jdbc:h2:tcp://localhost/c:/myDB",
+   jdbcUsername: "sa",
+   jdbcPassword: "sa",
+});
+```
+
+COnfiguration is useful to define a druable data store for activiti because if no configuration is provided, a h2 in memory database will be used and tables will be automatically created and dropped.  
+After configuration a process engine is created and the activiti API can be used.
+The following example reads the list of all process definitions. 
+ 
+```javascript
+  // access the activiti library 
+  var activiti = require('activiti');
+  
+  // use the repository service to access process definitions
   var repository = activiti.repositoryService(),
+  
+  // query all deployed process defintions 
   var processes  = repository.createProcessDefinitionQuerySync().listSync();
   console.log("Deployed Processes : " + processes.sizeSync());
-
+```
+  
 ## Tests
 
   npm test

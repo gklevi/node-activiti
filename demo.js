@@ -4,10 +4,9 @@ var fs = require('fs');
 
 activiti.configure({
    processEngineName : "myEngine",
-   jdbcUrl: "jdbc:h2:tcp://localhost/d:/Development/postalPC",
+   jdbcUrl: "jdbc:h2:tcp://localhost/d:/Development/myDB",
    jdbcUsername: "sa",
    jdbcPassword: "sa",
-   notKnown: "xx",
    databaseTablePrefix: "C_"
 });
 
