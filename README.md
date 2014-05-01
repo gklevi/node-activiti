@@ -1,8 +1,11 @@
 Activiti 4 Node.js
 ==================
 
-A small node module that provides access to the activiti process engine using the node java bridge (see https://github.com/joeferner/node-java).
+A small node module that provides access to the activiti process engine (http://activiti.org)) using the node java bridge (see https://github.com/joeferner/node-java).
 
+This module is a result of some experiments with the node platform.
+Trying out the useful node java bridge to leverage java libraries in node. 
+As a show case I have chosen the activiti process engine so that I can use executable bpmn models in node.    
 
 ## Installation
 
