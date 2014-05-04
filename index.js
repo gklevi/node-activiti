@@ -6,21 +6,21 @@ var java = require("java");
 //java.options.push("-Xmx=2048");
 
 // Add classpath to activiti jars
-java.classpath.push("./libs/activiti-engine-5.14.jar");
-java.classpath.push("./libs/activiti-spring-5.14.jar");
-java.classpath.push("./libs/activiti-bpmn-model-5.14.jar");
-java.classpath.push("./libs/activiti-bpmn-converter-5.14.jar");
-java.classpath.push("./libs/h2-1.3.170.jar");
-java.classpath.push("./libs/spring-core-3.1.2.RELEASE.jar");
-java.classpath.push("./libs/commons-logging-1.1.1.jar");
-java.classpath.push("./libs/commons-lang-2.4.jar");
-java.classpath.push("./libs/commons-lang3-3.1.jar");
-java.classpath.push("./libs/mybatis-3.2.2.jar");
-java.classpath.push("./libs/slf4j-api-1.7.2.jar");
-java.classpath.push("./libs/slf4j-log4j12-1.7.2.jar");
-java.classpath.push("./libs/log4j-1.2.13.jar");
-java.classpath.push("./libs/joda-time-2.1.jar");
-java.classpath.push("./processes");
+java.classpath.push(__dirname + "/libs/activiti-engine-5.14.jar");
+java.classpath.push(__dirname + "/libs/activiti-spring-5.14.jar");
+java.classpath.push(__dirname + "/libs/activiti-bpmn-model-5.14.jar");
+java.classpath.push(__dirname + "/libs/activiti-bpmn-converter-5.14.jar");
+java.classpath.push(__dirname + "/libs/h2-1.3.170.jar");
+java.classpath.push(__dirname + "/libs/spring-core-3.1.2.RELEASE.jar");
+java.classpath.push(__dirname + "/libs/commons-logging-1.1.1.jar");
+java.classpath.push(__dirname + "/libs/commons-lang-2.4.jar");
+java.classpath.push(__dirname + "/libs/commons-lang3-3.1.jar");
+java.classpath.push(__dirname + "/libs/mybatis-3.2.2.jar");
+java.classpath.push(__dirname + "/libs/slf4j-api-1.7.2.jar");
+java.classpath.push(__dirname + "/libs/slf4j-log4j12-1.7.2.jar");
+java.classpath.push(__dirname + "/libs/log4j-1.2.13.jar");
+java.classpath.push(__dirname + "/libs/joda-time-2.1.jar");
+java.classpath.push(__dirname + "/processes");
 
 // Create a process configuration
 var Config = java.import("org.activiti.engine.ProcessEngineConfiguration");
