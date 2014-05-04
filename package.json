@@ -4,7 +4,7 @@
   "description": "A small library that provides a bridge to the activiti process engine",
   "main": "index.js",
   "directories": {
-    "test": "test"
+    "test": "test",
     "libs": "libs"
   },
   "devDependencies": {
