@@ -5,6 +5,7 @@
   "main": "index.js",
   "directories": {
     "test": "test"
+    "libs": "libs"
   },
   "devDependencies": {
     "chai": "^1.9.1",
